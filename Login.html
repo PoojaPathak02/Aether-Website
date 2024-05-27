@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHER’s LOGIN PAGE</title>
+     <!-- Font -->
+     <link rel="stylesheet" href="font.css">
+     <!-- Css -->
+     <link rel="stylesheet" href="style.css">
+      <!-- B.js -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <!-- B.css -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <!-- B.icon -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+</head>
+<body>
+     <!-- HEADER -->
+     <section class="header d-sm-none d-xl-block" >
+        <div class="container-fluid d-flex justify-content-between">
+            <div class="left">
+                <ul class="d-flex list-unstyled" style="padding-left: 65px;">
+                    <li class="me-2 pt-3" ><a href="" class="text-decoration-none text-dark">FOR</a></li>
+                    <li class="me-2 pt-3"><a href="" class="text-decoration-none text-dark">THE</a></li>
+                    <li class="me-2 pt-3"><a href="" class="text-decoration-none text-dark">RESTLESS</a></li>
+                </ul> 
+            </div>
+
+            <div class="right">
+                <ul class="d-flex list-unstyled" style="padding-right: 65px;">
+                    <li class="me-2 pt-3"><a href="" class="text-decoration-none text-dark">LOS</a></li>
+                    <li class="me-3 pt-3"><a href="" class="text-decoration-none text-dark">ANGELES</a></li>
+                    <li class="pt-3"><a href="" id="hours" class="text-decoration-none text-dark"></a></li>
+                    <li class="pt-3"><a href="" class="text-decoration-none text-dark">:</a></li>
+                    <li class="me-3 pt-3"><a href="" id="minutes" class="text-decoration-none text-dark"></a></li>
+                    <li class="me-3 pt-3"><a href="" class="text-decoration-none text-dark">PDT</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- NAVBAR -->
+        <nav class="navbar">
+        <div class="container-fluid">
+            <button class="navbar-toggler d-sm-inline d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"><i class="bi bi-grid-3x3-gap-fill" ></i></span>
+            </button>
+            
+                 <div class="navbar navbar-expand-lg d-flex d-sm-none d-xl-flex">
+                  <a href="index.html"><img src="Images/logo.png" class=" mb-2 me-3" style="height: 30px; width: 80%;"></a>
+                <ul class= "d-flex list-unstyled">
+                    <li class="me-5" style="padding-top:11px ;"><a href="MenProductData.html" class="text-decoration-none text-dark">MEN</a></li>
+                    <li class="me-5" style="padding-top:11px ;"><a href="" class="text-decoration-none text-dark">WOMEN</a></li>
+                    <li style="padding-top:11px ;"><a href="" class="text-decoration-none text-dark">EXPLORE</a></li>
+                </ul>
+            </div>
+                <div class="logo text-center ">
+                    <h1 style=" font-weight: 600;" 
+                    class="d-sm-block me-sm-0 d-lg-flex ">A E T H E R</h1>
+                </div>
+            <div class="more" style="margin-right: 40px;">
+                <a href="" class="text-decoration-none text-dark"><i class="bi bi-search me-5 d-sm-none d-xl-inline" style="font-size: large;"></i></a>
+                <a href="Login.html"class="text-decoration-none text-dark"><i class="bi bi-person me-5 d-sm-none d-xl-inline" style="font-size: large;"></i></a>
+                <a href="AddToCart.html"class="text-decoration-none text-dark"><i class="bi bi-0-circle me-5 d-sm-inline ps-sm-5 me-sm-0 d-xl-inline ps-xl-0" style="font-size: large;"></i></a>
+            </div>
+            <div class="offcanvas offcanvas-end" id="menu">
+                <div class="offcanvas-header">
+                    <h1 style="font-family:'Times New Roman'; font-weight: 500;">A E T H E R </h1>
+                </div>
+                <ul class="offcanvas-body  list-unstyled">
+                  <a href="index.html" class="text-decoration-none text-dark "><img src="Images/logo.png" class="  me-3" style="height: 30px; width: 13%;"></a>
+                  <li class="me-5" style="padding-top:11px ;"><a href="MenProductData.html" class="text-decoration-none text-dark">MEN</a></li>
+                  <li class="me-5" style="padding-top:11px ;"><a href="WomenProduct.html" class="text-decoration-none text-dark">WOMEN</a></li>
+                  <li style="padding-top:11px ;"><a href="" class="text-decoration-none text-dark">EXPLORE</a></li>        
+              </ul>
+            </div>
+
+        </div>
+    </nav>
+    
+    <!-- LOGIN -->
+    <section>
+        <div class="container">
+            <div class="row m-sm-0">
+                <div class="col-6 mt-4 col-sm-10 col-md-10 col-lg-10 position-static m-sm-auto col-xl-6 mt-4 store">
+
+                    <h1 style="font-weight: 600px; padding-left: 15px;">Account</h1>
+                    <div class="btn d-flex justify-content-between mt-2">
+                        <a href="Login.html" class="text-decoration-none  " id="login">Login</a>
+                        <a href="CreateAccount.html" class="text-decoration-none p-sm-0 ps-xl-5 signin"
+                            style="font-size: 23px; padding-right: 200px; border-top: 2px solid #757575;color: #757575;">Create
+                            Account</a>
+                    </div>
+                    <form id="loginForm" class="form">
+                        <div class="input-group pt-5">
+                            <input type="text" id="login-email" name="username" placeholder="Email Address">
+                        </div>
+                        <span id="emailError" class="ms-3" style="color: red;"></span>
+                        <br>
+                        <div class="input-group">
+                            <input type ="password" id="login-password" name="password" placeholder="Password">
+                        </div>
+                        <span id="passwordError" class="ms-3" style="color: red;"></span>
+                        <h6 style="text-align: end; font-size: 12px; padding-right: 10px;" class="pt-3">FORGOT PASSWORD
+                        </h6>
+                        <button type="submit" class="submit">LOGIN</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- SUBSCRIBE -->
+    <div class="container-fluid Subscribe ">
+      <div class="row pt-5 pb-5" style="background-color: #F5F5F5;">
+          <div class="col-4 col-sm-12 col-md-12 col-lg-12 col-xl-4" style="padding-left: 64px; margin-right: 95px;">
+              <h3 style="font-weight: 700;">Subscribe to AETHER for <br> exclusive updates.</h3>
+                      <div class="input-email pt-2 pe-5">
+                          <input type="text" id="login-name" name="username" placeholder="Email Address" style="color: black;">
+                      </div>
+                      <input type="checkbox" class="mt-4 ms-3"> MEN
+                      <input type="checkbox" class="ms-3"> WOMEN
+
+                      <input type="checkbox" class="ms-4"> SNOW
+                      <input type="checkbox"class="ms-3"> MOTO
+
+                      <button type="submit" class="login1 mt-3 mb-3">JOIN EMAIL LIST</button>
+                      <p style="font-size: 10px; " class="mt-3">DISCOUNTS MAY NOT APPLY TO BRAND COLLABORATIONS OR THIRD-PARTY <br> PRODUCTS
+                           AND CANNOT BE COMBINED WITH ANOTHER PROMOTION.</p>
+
+          </div>
+          <div class="col-2 col-sm-12 col-md-12 col-lg-12 col-xl-2 ps-sm-4" style="border-left: 1px solid black; padding-left: 64px;">
+              <h1 style="font-weight: 600;">Visit Our <br> Stores</h1><br>
+              <div class="d-flex align-items-start d-sm-block d-xl-flex">
+                  <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active mb-2 mt-5" id="one" data-bs-toggle="pill" data-bs-target="#city1" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true" id="city1">LOS ANGELES</button>
+                    <button class="nav-link mb-2" id="two" data-bs-toggle="pill" data-bs-target="#city2"type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">ASPEN</button>
+                    <button class="nav-link mb-2" id="three" data-bs-toggle="pill" data-bs-target="#city3" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">SAN FRANCISCO</button>
+                    <button class="nav-link mb-2" id="four" data-bs-toggle="pill" data-bs-target="#city4" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">NEW YORK CITY</button>
+                    <button class="nav-link mb-2" id="five" data-bs-toggle="pill" data-bs-target="#city5" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">DENVER(OUTPOST)</button>
+                    <button class="nav-link" id="six" data-bs-toggle="pill" data-bs-target="#city6" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">ANTHERSTREAM</button>
+  
+                  </div>
+                  <div class="tab-content ps-lg-5 ms-lg-5  ms-xl-0 ps-lg-0 ps-sm-3 " id="v-pills-tabContent">
+                    <div class="tab-pane fade show active mt-sm-3  mt-md-3" id="city1" role="tabpanel" aria-labelledby="v-pills-home-tab"><img src="https://cdn.sanity.io/images/e5o7qwlw/production/eeefeab49c824272260a0736ee30c3d6a0558779-8104x5405.jpg?w=1024&q=75&auto=format" 
+                      height="300px" width="500" alt="" class="img ms-md-5 ps-md-5 ms-xl-0 ps-lg-0 ">
+                  </div>
+                  <div class="tab-pane fade show " id="city2" role="tabpanel" aria-labelledby="v-pills-home-tab"><img src="https://cdn.sanity.io/images/e5o7qwlw/production/5a514b1dc75656404720b98af3fecbe63795e5ae-8368x5584.jpg?w=1024&q=75&auto=format" 
+                      height="300px" width="500" alt="" class="img ms-md-5 ps-md-5 ms-xl-0 ps-lg-0 ">
+                  </div>
+                  <div class="tab-pane fade show " id="city3" role="tabpanel" aria-labelledby="v-pills-home-tab"><img src="https://cdn.sanity.io/images/e5o7qwlw/production/e05c9e0aa1bab0f4d48ea3c9f7fe00eb04f2fbdf-6200x4134.jpg?w=1024&q=75&auto=format" 
+                      height="300px" width="500" alt="" class="img ms-md-5 ps-md-5 ms-xl-0 ps-lg-0 ">
+                  </div>
+                  <div class="tab-pane fade show " id="city4" role="tabpanel" aria-labelledby="v-pills-home-tab"><img src="https://cdn.sanity.io/images/e5o7qwlw/production/66a6b243cd11f49ba12fb4bff2321b1558dda18d-897x600.jpg?w=1024&q=75&auto=format" 
+                      height="300px" width="500" alt="" class="img ms-md-5 ps-md-5 ms-xl-0 ps-lg-0 ">
+                  </div>
+                  <div class="tab-pane fade show " id="city5" role="tabpanel" aria-labelledby="v-pills-home-tab"><img src="https://cdn.sanity.io/images/e5o7qwlw/production/42a65cefbc0c818232117f1c1c2e207bbaab1a22-8095x5399.jpg?w=1024&q=75&auto=format" 
+                      height="300px" width="500" alt="" class="img ms-md-5 ps-md-5 ms-xl-0 ps-lg-0">
+                  </div>
+                  <div class="tab-pane fade show " id="city6" role="tabpanel" aria-labelledby="v-pills-home-tab"><img src="https://cdn.sanity.io/images/e5o7qwlw/production/266f904fcd24d4f7c0e46d7f9a2e2331decf74af-3648x2736.jpg?w=1024&q=75&auto=format" 
+                      height="300px" width="500" alt="" class="img ms-md-5 ps-md-5 ms-xl-0 ps-lg-0 ">
+                  </div>
+                    
+                </div>
+          </div>
+          </div>
+          
+  </div>
+
+      <!-- AETHER -->
+      <div class="container-fluid ">
+        <div class="row">
+            <div class="col-12  d-md-none d-xxl-block  aether">
+                <h1 style="font-size: 230px; font-weight: 600; letter-spacing: 10px; margin-left: 50px; margin-top: 96px; margin-bottom: 96px;">A E T H E R </h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    
+    <div class="accordion d-xl-none d-md-none d-sm-block " id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button fw-bold" data-bs-toggle="collapse" data-bs-target="#collapseOne"  >
+              Men
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show"  data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <ul class="list-unstyled col-12 ">
+                <li> <a href="#" class="nav-link text-dark fw-bold colorme" ></a></li>
+                <li><a href="#" class="nav-link text-dark">EXPLORE MEN'S</a></li>
+                <li><a href="#" class="nav-link text-dark">CLOTHING</a></li>
+                <li><a href="#" class="nav-link text-dark">SNOW</a></li>
+                <li><a href="#" class="nav-link text-dark">MOTORCYCLE</a></li>
+                
+            </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed fw-bold"  data-bs-toggle="collapse" data-bs-target="#collapseTwo" >
+           Women
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <ul class="list-unstyled col-12">
+                <li><a href="#" class="nav-link text-dark">EXPLORE WOMEN'S </a></li>
+                <li><a href="#" class="nav-link text-dark">CLOTHING</a></li>
+                <li><a href="#" class="nav-link text-dark">SNOW</a></li>
+                
+            </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#collapseThree" >
+          Explore
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <ul class="list-unstyled col-12">
+                <li><a href="#" class="nav-link text-dark">JOURNAL</a></li>
+                <li><a href="#" class="nav-link text-dark">OUR STORES</a></li>
+                <li><a href="#" class="nav-link text-dark">ABOUT</a></li>
+                <li><a href="#" class="nav-link text-dark">CATALOG</a></li>
+                <li><a href="#" class="nav-link text-dark">7TH ANNUAL AETHER RALLY</a></li>
+                
+            </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingfour">
+            <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#collapsefour" >
+            Support
+            </button>
+          </h2>
+          <div id="collapsefour" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <ul class="list-unstyled col-12">
+              
+                <li><a href="#" class="nav-link text-dark">RETURNS & EXCHANGES</a></li>
+                <li><a href="#" class="nav-link text-dark">FAQ</a></li>
+                <li><a href="#" class="nav-link text-dark">ACCESSIBILITY</a></li>
+                <li><a href="#" class="nav-link text-dark">CONTACT</a></li>
+               
+            </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingfive">
+              <button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#collapsefive" >
+              Connect
+              </button>
+            </h2>
+            <div id="collapsefour" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <ul class="list-unstyled col-12">
+                
+                  <li><a href="#" class="nav-link text-dark">INSTAGRAM</a></li>
+                  <li><a href="#" class="nav-link text-dark">FACEBOOK</a></li>
+                  <li><a href="#" class="nav-link text-dark">TIKTOK</a></li>
+                  <li><a href="#" class="nav-link text-dark">YOUTUBE</a></li>
+                 
+              </ul>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+  
+    <div class="footer container d-none d-xl-block d-md-block mt-5" style="border-bottom: 1px solid black;">
+      <div class="d-flex justify-content-between" style="margin-bottom: 96px;">
+        <ul class="list-unstyled col-2 ">
+            <li> <a href="#" class="nav-link text-dark fw-bold" style="font-size: larger;">Men</a></li>
+            <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">EXPLORE MEN'S</a></li>
+            <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">CLOTHING</a></li>
+            <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">SNOW</a></li>
+            <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">MOTORCYCLE</a></li>
+            </li>
+        </ul>
+        <ul class="list-unstyled col-2">
+          <li> <a href="#" class="nav-link text-dark fw-bold" style="font-size: larger;">Women</a></li>
+          <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">EXPLORE WOMEN'S</a></li>
+          <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">CLOTHING</a></li>
+          <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">SNOW</a></li>
+          
+      </ul>
+      <ul class="list-unstyled col-2">
+        <li> <a href="#" class="nav-link text-dark fw-bold" style="font-size: larger;">Explore</a></li>
+        <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">JOURNAL</a></li>
+        <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">OUR STORES</a></li>
+        <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">ABOUT</a></li>
+        <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">CATALOG</a></li>
+        <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">7TH ANNUAL AETHER RALLY</a></li>
+        
+       
+    </ul>
+    <ul class="list-unstyled col-2">
+      <li> <a href="#" class="nav-link text-dark fw-bold" style="font-size: larger;">Support </a></li>
+      <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">RETURNS & EXCHANGES</a></li>
+      <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">FAQ</a></li>
+      <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">ACCESSIBILITY</a></li>
+      <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">CONTACT</a></li>
+      
+  </ul>
+  <ul class="list-unstyled col-2">
+    <li> <a href="#" class="nav-link text-dark fw-bold" style="font-size: larger;">Connect</a></li>
+    <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">INSTAGRAM</a></li>
+    <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">FACEBOOK</a></li>
+    <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">TIKTOK</a></li>
+    <li><a href="#" class="nav-link text-dark" style="font-size: 11px;">YOUTUBE</a></li>
+    
+</ul>
+
+    <img src="Images/footer.png" alt="" height="80" width="100">
+      </div>
+    </div>
+    <div class="container mt-3 ">
+      <div class="row d-flex justify-content-between">
+        <div class="col-6 col-sm-12 col-xl-6">
+            YOU ONLY LIVE ONCE, BUT IF YOU DO IT RIGHT, ONCE IS ENOUGH. – MAE WEST
+        </div>
+        <div class="col-5 col-sm-12 mt-sm-3 col-xl-6 mt-xl-0">
+            <p>© 2024 ALL RIGHTS RESERVED &nbsp;&nbsp; PRIVACY &nbsp;&nbsp; TERMS OF USE</p>
+        </div>
+      </div>
+    
+        
+    </div>
+
+</body>
+<script src="index.js"></script>
+<script>
+  //LOCAL STORAGE OF LOGIN
+const login = document.getElementById("loginForm")
+var arr1 =[]
+loginForm.addEventListener("submit",(event)=>{
+    event.preventDefault()
+    let valid= true
+    let loginEmail=document.getElementById("login-email");
+    let loginPassword=document.getElementById("login-password");
+
+    if(loginEmail.value == "")
+        {
+            valid=false;
+            document.getElementById("emailError").innerText="Email is required!"
+        }else{
+            document.getElementById("emailError").innerText=""}
+    if(loginPassword.value == "")
+    {
+        valid=false;
+        document.getElementById("passwordError").innerText="Password is required!"
+    }else{
+        document.getElementById("passwordError").innerText=""}
+        
+    if(valid){
+        alert("Login Sucessfully")
+    }
+    else{
+        alert("Something went Wrong!")
+    }
+
+    let loginData={
+        email:document.getElementById("login-email").value,
+        password:document.getElementById("login-password").value
+    }
+    // console.log(loginData)
+    arr1.push(loginData)
+    console.log(arr1)
+
+    localStorage.setItem("login",JSON.stringify(arr1))
+})
+
+</script>
+</html>

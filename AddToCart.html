@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHER’s ADD TO CART</title>
+    <!-- Font -->
+    <link rel="stylesheet" href="font.css">
+    <!-- Css -->
+    <link rel="stylesheet" href="style.css">
+     <!-- B.js -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <!-- B.css -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <!-- B.icon -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+ 
+</head>
+<style>
+    #products
+    {
+        display: flex;
+    }
+    @media(min-width:576px)
+    {
+        #products{
+            display: inline;
+        }
+    }
+    @media(min-width:768px)
+    {
+        #products{
+            display: inline;
+        }
+    }
+    @media(min-width:992px)
+    {
+        #products{
+            display: inline;
+        }
+    }
+    @media(min-width:1200px)
+    {
+        #products{
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 40px;
+        }
+    }
+</style>
+<body style="background-color: #edecec ;">
+    
+     <h1 style="text-align: center; color: black; letter-spacing: 10px; " class="mt-5">CART</h1>
+    <div id="products">
+    </div>
+</body>
+<!-- <script src="index.js"></script> -->
+<script>
+    function FetchData()
+    {
+        fetch("https://aether-backend-ynhk.onrender.com/card")
+        .then((res)=>res.json())
+        .then((data)=>listOfInfo(data))
+        .catch((err)=>console.log(err))
+    }
+    FetchData()
+
+    function listOfInfo(data)
+    {
+        // console.log(data)
+        const store=data.map((el)=>singleInfo(el.id,el.image,el.title,el.price,el.description,el.color))
+        document.getElementById("products").innerHTML=store.join("")
+    }
+
+    function singleInfo(id,image,title,price,description,color)
+    {
+        let card =`
+        <a style="text-decoration:none;color:black" href="description.html?title=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&color=${encodeURIComponent(color)}&description=${encodeURIComponent(description)}&price=${encodeURIComponent(price)}">
+        <div class="singleCart">
+            <img src=${image} alt="" height="700px" width="540px"></a>
+            <h3 class="mt-3"><b>${title}</b></h3>
+            <span class="me-3">${price}</span>
+            <span>${description}</span>
+            <p>Color: ${color}</p>
+            <button data-id=${id} class="card-button">Remove</button>
+        </div>
+      
+        ` 
+        return card
+    }
+//REMOVE FROM ADD TO CART
+document.addEventListener("click",(e)=>{
+  if(e.target.classList.contains("card-button")){
+  deleteData(e.target.dataset.id);}
+ })
+
+ function deleteData(id)
+ {
+  fetch(`https://aether-backend-ynhk.onrender.com/card/${id}`,{
+    method:'DELETE'
+  })
+  .then((res)=>res.json)
+  .then((data)=>{
+    alert("Removed from Cart")
+    console.log(data)
+  })
+  .catch((err)=>console.log(err))
+ }
+
+
+</script>
+</html>
